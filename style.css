@@ -83,4 +83,5 @@ header p {
     width: 50px;
     border-radius: 50px;
     bottom: 0px;
+    z-index: -1;
 }

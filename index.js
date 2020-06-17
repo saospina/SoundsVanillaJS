@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
      const SOUNDS = document.querySelectorAll('.sound');
      const PADS = document.querySelectorAll('.pads div');
-     const VISUAL = document.querySelector('visual');
+     const VISUAL = document.querySelector('.visual');
      const COLORS = [
          "lightsalmon",
          "lightgrey",
@@ -25,7 +25,10 @@ window.addEventListener('load', () => {
         VISUAL.appendChild(buble);
         buble.style.backgroundColor = COLORS[index];
         buble.style.animation = 'jump 1s ease';
-     }
+        buble.addEventListener('animationend', function () {
+            VISUAL.removeChild(this);
+        });
+     };
      
      
 })
